@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComicCraft - AI Comic Story Creator</title>
+</head>
+
+<body>
+
+    <h1>ComicCraft</h1>
+
+    <h2>AI Comic Story Creator</h2>
+
+    <p>Create your own comic story with the power of AI.</p>
+
+    <label>Enter your story idea:</label>
+    <br><br>
+
+    <textarea id="story" rows="6" cols="50"
+        placeholder="Enter your story idea here..."></textarea>
+
+    <br><br>
+
+    <button onclick="createComic()">Create Comic</button>
+
+    <h3>Your Comic Story</h3>
+
+    <p id="result"></p>
+
+    <script>
+        function createComic() {
+            let story = document.getElementById("story").value;
+
+            if (story === "") {
+                document.getElementById("result").innerText =
+                    "Please enter a story idea.";
+            } else {
+                document.getElementById("result").innerText =
+                    "Your comic story idea: " + story;
+            }
+        }
+    </script>
+
+</body>
+</html>
